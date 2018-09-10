@@ -1,0 +1,110 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "standard",
+    "plugin:react/recommended",
+    "prettier",
+    "prettier/react",
+    "prettier/standard"
+  ],
+  "plugins": ["prettier", "react", "standard", "react-native"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true,
+    "react-native/react-native": true
+  },
+
+  // Map from global var to bool specifying if it can be redefined
+  "globals": {
+    "__DEV__": true,
+    "__dirname": false,
+    "__fbBatchedBridgeConfig": false,
+    "alert": false,
+    "cancelAnimationFrame": false,
+    "cancelIdleCallback": false,
+    "clearImmediate": true,
+    "clearInterval": false,
+    "clearTimeout": false,
+    "console": false,
+    "document": false,
+    "escape": false,
+    "Event": false,
+    "EventTarget": false,
+    "exports": false,
+    "fetch": false,
+    "FormData": false,
+    "global": false,
+    "jest": false,
+    "Map": true,
+    "module": false,
+    "navigator": false,
+    "process": false,
+    "Promise": true,
+    "requestAnimationFrame": true,
+    "requestIdleCallback": true,
+    "require": false,
+    "Set": true,
+    "setImmediate": true,
+    "setInterval": false,
+    "setTimeout": false,
+    "window": false,
+    "XMLHttpRequest": false,
+    "pit": false
+  },
+
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "all",
+        "semi": false
+      }
+    ],
+
+    // Standard
+    "arrow-body-style": 0, // Require braces in arrow function body
+    "global-require": 0, // We use require for images
+    "new-cap": 0, // require constructor function names to begin with a capital letter - react native causes failures
+    "no-console": 0, // disallow the use of console - maybe a warning?
+    "no-use-before-define": 0, // Disallow Early Use
+    "no-duplicate-imports": 0, // Disallow duplicate imports - disabled in favor of import/no-duplicates
+    "strict": [1, "never"],
+    "indent": 0,
+    "no-return-assign": 2,
+    "consistent-return": 2,
+
+    // Import
+    "import/no-unresolved": 0, // Doesn't work with provide modules
+    "import/no-duplicates": 2, // Reports if a resolved path is imported more than once - supports flow
+    "import/no-extraneous-dependencies": 0, // doesn't work with provide modules
+    "import/imports-first": 0, // We have our own rule
+    "import/newline-after-import": 0,
+    "import/first": 0,
+
+    // React
+    "react/display-name": 0,
+    "react/prop-types": 0, // Prevent missing props validation in a React component definition - Using flow proptypes instead
+    "react/sort-comp": 0, // Enforce component methods order
+    "react/jsx-filename-extension": [2, { "extensions": [".js"] }], // not supported on react native https://github.com/facebook/react-native/pull/5233
+
+    // React Native
+    "react-native/no-unused-styles": 2,
+    "react-native/split-platform-components": 0,
+    "react-native/no-inline-styles": 0,
+    "react-native/no-color-literals": 0
+  },
+
+  "settings": {
+    "react": {
+      "version": "16.3"
+    }
+  }
+}
