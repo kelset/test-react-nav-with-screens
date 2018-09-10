@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "react": "16.5.0",
-    "react-native": "0.56.0",
+    "react-native": "0.57.0-rc.4",
     "react-navigation": "2.13.0"
   },
   "devDependencies": {
@@ -26,7 +26,7 @@
     "eslint-plugin-promise": "4.0.1",
     "prettier": "1.14.2",
     "prettier-eslint-cli": "4.7.1",
-    "babel-preset-react-native": "^5",
+    "metro-react-native-babel-preset": "^0.45.0",
     "jest": "23.6.0",
     "react-test-renderer": "16.5.0"
   },
