@@ -1,21 +1,21 @@
 import React from 'react'
 import { createStackNavigator } from 'react-navigation'
 
-import { MainNavigator } from './navigators/MainNavigator'
-import { ModalNavigator } from './navigators/ModalNavigator'
+import { MainNavScreen } from './navigators/MainNavigator'
+import { ModalNavScreen } from './navigators/ModalNavigator'
 
 const RootStack = createStackNavigator(
   {
     Main: {
-      screen: MainNavigator,
+      screen: MainNavScreen,
     },
     MyModal: {
-      screen: ModalNavigator,
+      screen: ModalNavScreen,
     },
   },
   {
     mode: 'modal',
-    headerMode: 'none',
+    headerMode: 'screen',
   },
 )
 

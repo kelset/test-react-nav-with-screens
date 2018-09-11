@@ -7,19 +7,11 @@ export class HomeScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return {
       headerLeft: (
-        <Button
-          onPress={() => navigation.navigate('MyModal')}
-          title="Info"
-          color="#fff"
-        />
+        <Button onPress={() => navigation.navigate('MyModal')} title="Info" />
       ),
       headerTitle: <LogoTitle />,
       headerRight: (
-        <Button
-          onPress={navigation.getParam('increaseCount')}
-          title="+1"
-          color="#fff"
-        />
+        <Button onPress={navigation.getParam('increaseCount')} title="+1" />
       ),
     }
   }

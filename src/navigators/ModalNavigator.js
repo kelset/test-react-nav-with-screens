@@ -1,3 +1,4 @@
+import React from 'react'
 import { createFluidNavigator } from 'react-navigation-fluid-transitions'
 
 import { Screen1, Screen2, Screen3 } from '../screens/ModalScreen'
@@ -14,3 +15,11 @@ export const ModalNavigator = createFluidNavigator(
     },
   },
 )
+
+export class ModalNavScreen extends React.Component {
+  static router = ModalNavigator.router
+
+  render() {
+    return <ModalNavigator navigation={this.props.navigation} />
+  }
+}
