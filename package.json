@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "react": "16.5.0",
     "react-native": "0.57.0-rc.4",
-    "react-native-screens": "1.0.0-alpha.6",
+    "react-native-screens": "1.0.0-alpha.7",
     "react-navigation": "2.13.0",
     "react-navigation-fluid-transitions": "0.2.6"
   },
@@ -28,6 +29,8 @@
     "eslint-plugin-standard": "4.0.0",
     "jest": "23.6.0",
     "metro-react-native-babel-preset": "0.45.1",
+    "patch-package": "5.1.1",
+    "postinstall-postinstall": "1.0.0",
     "prettier": "1.14.2",
     "prettier-eslint-cli": "4.7.1",
     "react-test-renderer": "16.5.0"
