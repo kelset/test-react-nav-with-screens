@@ -1,15 +1,21 @@
 import { createStackNavigator } from 'react-navigation'
 
-import { PrimeNavigatorScreen } from './PrimeNavigator'
+import { TabNavigatorScreen } from './TabNavigator'
 import { ModalNavigator } from './ModalNavigator'
 
 export const MainNavigator = createStackNavigator(
   {
-    Main: PrimeNavigatorScreen,
+    Main: TabNavigatorScreen,
     MyModal: ModalNavigator,
   },
   {
     mode: 'modal',
-    headerMode: 'screen',
+    navigationOptions: {
+      headerMode: 'screen',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+      gesturesEnabled: false,
+    },
   },
 )

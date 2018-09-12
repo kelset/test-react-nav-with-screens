@@ -6,7 +6,7 @@ export class LogoTitle extends React.Component {
     return (
       <Image
         source={require('../assets/spiro.png')}
-        style={{ width: 30, height: 30 }}
+        style={{ width: 30, height: 30, tintColor: 'red' }}
       />
     )
   }
