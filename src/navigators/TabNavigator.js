@@ -1,22 +1,19 @@
 import React from 'react'
-import { Text, View, Button } from 'react-native'
+import { Button } from 'react-native'
 import { createBottomTabNavigator } from 'react-navigation'
 import { HomeTabNavigator } from './HomeTabNavigator'
 import { LogoTitle } from '../components/LogoTitle'
-
-class SettingsScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Settings!</Text>
-      </View>
-    )
-  }
-}
+import { SettingsScreen } from '../screens/SettingsScreen'
+import { RMRScreen } from '../screens/RMRScreen'
+import { SpottingScreen } from '../screens/SpottingScreen'
+import { ChatScreen } from '../screens/ChatScreen'
 
 export const TabNavigator = createBottomTabNavigator({
   Home: HomeTabNavigator,
   Settings: SettingsScreen,
+  RMR: RMRScreen,
+  Spotting: SpottingScreen,
+  Chat: ChatScreen,
 })
 
 export class TabNavigatorScreen extends React.Component {
