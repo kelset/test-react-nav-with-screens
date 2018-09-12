@@ -19,6 +19,7 @@ const screens = {
 const options = {
   tabBarOptions: {
     activeTintColor: '#e91e63',
+    // showLabel: false,
     labelStyle: {
       fontSize: 12,
     },
