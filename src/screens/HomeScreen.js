@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Button } from 'react-native'
+import { View, Text, Button, AsyncStorage } from 'react-native'
 
 import { LogoTitle } from '../components/LogoTitle'
 
@@ -44,7 +44,14 @@ export class HomeScreen extends React.Component {
             })
           }}
         />
+
+        <Button title="Actually, sign me out :)" onPress={this._signOutAsync} />
       </View>
     )
+  }
+
+  _signOutAsync = async () => {
+    await AsyncStorage.clear()
+    this.props.navigation.navigate('Auth')
   }
 }
