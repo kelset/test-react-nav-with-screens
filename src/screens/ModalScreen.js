@@ -2,34 +2,12 @@ import React from 'react'
 import { View, Text, Button, StyleSheet, SafeAreaView } from 'react-native'
 import { Transition } from 'react-navigation-fluid-transitions'
 
-const Circle = props => (
-  <View
-    style={{
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: props.background,
-      width: props.size,
-      height: props.size,
-      borderRadius: props.size / 2,
-    }}
-  />
-)
-
-const Shape = props => (
-  <View
-    style={{
-      backgroundColor: props.background || '#EE0000',
-      width: props.size,
-      height: props.size,
-      borderRadius: props.borderRadius || 0,
-    }}
-  />
-)
+import { Circle, Shape } from '../components/Shapes'
 
 export const Screen1 = props => (
   <SafeAreaView style={styles.container}>
     <Transition appear="flip">
-      <Text>1.Screen</Text>
+      <Text>1.FluidScreen</Text>
     </Transition>
     <View style={styles.screen1}>
       <Transition shared="circle">
@@ -63,7 +41,7 @@ export const Screen1 = props => (
 export const Screen2 = props => (
   <SafeAreaView style={styles.container}>
     <Transition appear="flip">
-      <Text>2.Screen</Text>
+      <Text>2.FluidScreen</Text>
     </Transition>
     <View style={styles.screen2}>
       <Transition shared="circle">
@@ -99,7 +77,7 @@ export const Screen2 = props => (
 export const Screen3 = props => (
   <SafeAreaView style={styles.container}>
     <Transition appear="flip">
-      <Text>3.Screen</Text>
+      <Text>3.FluidScreen</Text>
     </Transition>
     <View style={styles.screen3}>
       <Transition shared="circle">

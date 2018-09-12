@@ -18,7 +18,6 @@ const PrimeNavigator = createStackNavigator(
   {
     initialRouteName: 'Home',
     mode: 'card',
-    /* The header config from HomeScreen is now here */
     navigationOptions: {
       headerMode: 'screen',
       headerTitleStyle: {
