@@ -8,13 +8,27 @@ import { RMRScreen } from '../screens/RMRScreen'
 import { SpottingScreen } from '../screens/SpottingScreen'
 import { ChatScreen } from '../screens/ChatScreen'
 
-export const TabNavigator = createBottomTabNavigator({
+const screens = {
   Home: HomeTabNavigator,
   Settings: SettingsScreen,
   RMR: RMRScreen,
   Spotting: SpottingScreen,
   Chat: ChatScreen,
-})
+}
+
+const options = {
+  tabBarOptions: {
+    activeTintColor: '#e91e63',
+    labelStyle: {
+      fontSize: 12,
+    },
+    style: {
+      backgroundColor: 'blue',
+    },
+  },
+}
+
+export const TabNavigator = createBottomTabNavigator(screens, options)
 
 export class TabNavigatorScreen extends React.Component {
   static router = TabNavigator.router
