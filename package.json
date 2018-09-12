@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "react": "16.5.0",
-    "react-native": "0.57.0-rc.4",
+    "react-native": "0.57.0",
     "react-native-screens": "1.0.0-alpha.9",
     "react-navigation": "2.13.0",
     "react-navigation-fluid-transitions": "0.2.6"
