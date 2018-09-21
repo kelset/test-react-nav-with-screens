@@ -1,4 +1,5 @@
-import { Easing, Animated } from 'react-native'
+import React from 'react'
+import { Easing, Animated, Image } from 'react-native'
 
 import { createStackNavigator } from 'react-navigation'
 
@@ -40,3 +41,20 @@ export const HomeTabNavigator = createStackNavigator(
     }),
   },
 )
+
+export class HomeTabNavigatorScreen extends React.Component {
+  static router = HomeTabNavigator.router
+
+  static navigationOptions = {
+    tabBarIcon: ({ focused }) => (
+      <Image
+        source={require('../assets/spiro.png')}
+        style={{ width: 15, height: 15, tintColor: focused ? 'red' : 'coral' }}
+      />
+    ),
+  }
+
+  render() {
+    return <HomeTabNavigator navigation={this.props.navigation} />
+  }
+}

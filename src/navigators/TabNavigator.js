@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from 'react-native'
 import { createBottomTabNavigator } from 'react-navigation'
-import { HomeTabNavigator } from './HomeTabNavigator'
+import { HomeTabNavigatorScreen } from './HomeTabNavigator'
 import { LogoTitle } from '../components/LogoTitle'
 import { SettingsScreen } from '../screens/SettingsScreen'
 import { RMRScreen } from '../screens/RMRScreen'
@@ -9,7 +9,7 @@ import { SpottingScreen } from '../screens/SpottingScreen'
 import { ChatScreen } from '../screens/ChatScreen'
 
 const screens = {
-  Home: HomeTabNavigator,
+  Home: HomeTabNavigatorScreen,
   Settings: SettingsScreen,
   RMR: RMRScreen,
   Spotting: SpottingScreen,
@@ -19,7 +19,6 @@ const screens = {
 const options = {
   tabBarOptions: {
     activeTintColor: '#e91e63',
-    // showLabel: false,
     labelStyle: {
       fontSize: 12,
     },
