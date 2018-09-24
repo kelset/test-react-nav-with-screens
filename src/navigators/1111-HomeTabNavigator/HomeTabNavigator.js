@@ -3,8 +3,8 @@ import { Easing, Animated, Image } from 'react-native'
 
 import { createStackNavigator } from 'react-navigation'
 
-import { HomeScreen } from '../screens/HomeScreen'
-import { DetailsScreen } from '../screens/DetailsScreen'
+import { HomeScreen } from './screens/HomeScreen'
+import { DetailsScreen } from './screens/DetailsScreen'
 
 export const HomeTabNavigator = createStackNavigator(
   {
@@ -48,7 +48,7 @@ export class HomeTabNavigatorScreen extends React.Component {
   static navigationOptions = {
     tabBarIcon: ({ focused }) => (
       <Image
-        source={require('../assets/spiro.png')}
+        source={require('../../assets/spiro.png')}
         style={{ width: 15, height: 15, tintColor: focused ? 'red' : 'coral' }}
       />
     ),

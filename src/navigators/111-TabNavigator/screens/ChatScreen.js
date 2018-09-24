@@ -1,11 +1,11 @@
 import React from 'react'
 import { Text, View, Image } from 'react-native'
 
-export class SpottingScreen extends React.Component {
+export class ChatScreen extends React.Component {
   static navigationOptions = {
     tabBarIcon: ({ focused }) => (
       <Image
-        source={require('../assets/spiro.png')}
+        source={require('../../../assets/spiro.png')}
         style={{ width: 15, height: 15, tintColor: focused ? 'red' : 'coral' }}
       />
     ),
@@ -14,7 +14,7 @@ export class SpottingScreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Spotting!</Text>
+        <Text>Chat!</Text>
       </View>
     )
   }

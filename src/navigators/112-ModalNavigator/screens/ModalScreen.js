@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, Button, StyleSheet, SafeAreaView } from 'react-native'
 import { Transition } from 'react-navigation-fluid-transitions'
 
-import { Circle, Shape } from '../components/Shapes'
+import { Circle, Shape } from '../../../components/Shapes'
 
 export const Screen1 = props => (
   <SafeAreaView style={styles.container}>
