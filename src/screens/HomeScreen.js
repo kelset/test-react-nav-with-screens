@@ -2,7 +2,15 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { View, Text, Button, AsyncStorage } from 'react-native'
 
-class HomeScreenBase extends React.PureComponent {
+class HomeScreenBase extends React.Component {
+  shouldComponentUpdate(nextProps) {
+    if (this.props.value !== nextProps.value) {
+      console.log('the value changed!')
+      return true
+    }
+    return false
+  }
+
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
