@@ -1,12 +1,15 @@
 import React from 'react'
 import { Button } from 'react-native'
 import { createBottomTabNavigator } from 'react-navigation'
+
 import { HomeTabNavigatorScreen } from '../HomeTabNav/config'
-import { LogoTitle } from '../../components/LogoTitle'
 import { SettingsScreen } from '../../screens/SettingsScreen'
 import { RMRScreen } from '../../screens/RMRScreen'
 import { SpottingScreen } from '../../screens/SpottingScreen'
 import { ChatScreen } from '../../screens/ChatScreen'
+
+import { LogoTitle } from '../../components/LogoTitle'
+import { PlusOneButton } from '../../components/PlusOneButton'
 
 const screens = {
   Home: HomeTabNavigatorScreen,
@@ -28,7 +31,7 @@ const options = {
   },
 }
 
-export const TabNavigator = createBottomTabNavigator(screens, options)
+const TabNavigator = createBottomTabNavigator(screens, options)
 
 export class TabNavigatorScreen extends React.Component {
   static router = TabNavigator.router
@@ -38,12 +41,8 @@ export class TabNavigatorScreen extends React.Component {
       headerLeft: (
         <Button onPress={() => navigation.navigate('MyModal')} title="Info" />
       ),
-      // and the title should react to this too
       headerTitle: <LogoTitle />,
-      // TODO: have this as redux
-      // headerRight: (
-      //   <Button onPress={navigation.getParam('increaseCount')} title="+1" />
-      // ),
+      headerRight: <PlusOneButton />,
     }
   }
 

@@ -1,11 +1,13 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { View, Text, Button, AsyncStorage } from 'react-native'
 
-export class HomeScreen extends React.PureComponent {
+class HomeScreenBase extends React.PureComponent {
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Text>Home Screen</Text>
+        <Text>{`Counter=${this.props.value}`}</Text>
 
         <Button title="Go to Details" onPress={this._navigateToDetail} />
 
@@ -26,3 +28,9 @@ export class HomeScreen extends React.PureComponent {
     this.props.navigation.navigate('Auth')
   }
 }
+
+const mapStateToProps = state => ({
+  value: state.basicReducer.value,
+})
+
+export const HomeScreen = connect(mapStateToProps)(HomeScreenBase)
