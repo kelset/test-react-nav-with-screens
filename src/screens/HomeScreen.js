@@ -5,7 +5,7 @@ import { View, Text, Button, AsyncStorage } from 'react-native'
 class HomeScreenBase extends React.Component {
   shouldComponentUpdate(nextProps) {
     if (this.props.value !== nextProps.value) {
-      console.log('the value changed!')
+      console.log('the value changed even if the screen is sleeping!')
       return true
     }
     return false
