@@ -14,7 +14,6 @@ export const HomeTabNavigator = createStackNavigator(
   {
     initialRouteName: 'Home',
     mode: 'card',
-    headerMode: 'none',
     transitionConfig: () => ({
       transitionSpec: {
         duration: 300,
