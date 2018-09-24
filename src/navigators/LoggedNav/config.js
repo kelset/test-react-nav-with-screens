@@ -1,3 +1,6 @@
+import React from 'react'
+import { Button } from 'react-native'
+
 import { createStackNavigator } from 'react-navigation'
 
 import { TabNavigator } from '../TabNav/config'
@@ -11,7 +14,14 @@ export const LoggedNavigator = createStackNavigator(
         header: null,
       },
     },
-    MyModal: ModalNavigator,
+    MyModal: {
+      screen: ModalNavigator,
+      navigationOptions: ({ navigation }) => ({
+        headerLeft: (
+          <Button title="Close" onPress={() => navigation.goBack()} />
+        ),
+      }),
+    },
   },
   {
     mode: 'modal',
