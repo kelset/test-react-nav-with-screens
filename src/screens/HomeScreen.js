@@ -43,7 +43,6 @@ class HomeScreenBase extends React.Component {
       otherParam: 'anything you want here',
       hideTabBar: true,
     })
-    this.props.navigation.setParams('hideTab', true)
   }
 
   _signOutAsync = async () => {
