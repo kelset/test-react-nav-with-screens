@@ -3,8 +3,8 @@ import { Easing, Animated, Image } from 'react-native'
 
 import { createStackNavigator } from 'react-navigation'
 
-import { HomeScreen } from './screens/HomeScreen'
-import { DetailsScreen } from './screens/DetailsScreen'
+import { HomeScreen } from '../../screens/HomeScreen'
+import { DetailsScreen } from '../../screens/DetailsScreen'
 
 export const HomeTabNavigator = createStackNavigator(
   {

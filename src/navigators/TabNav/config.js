@@ -1,12 +1,12 @@
 import React from 'react'
 import { Button } from 'react-native'
 import { createBottomTabNavigator } from 'react-navigation'
-import { HomeTabNavigatorScreen } from '../1111-HomeTabNavigator/HomeTabNavigator'
+import { HomeTabNavigatorScreen } from '../HomeTabNav/config'
 import { LogoTitle } from '../../components/LogoTitle'
-import { SettingsScreen } from './screens/SettingsScreen'
-import { RMRScreen } from './screens/RMRScreen'
-import { SpottingScreen } from './screens/SpottingScreen'
-import { ChatScreen } from './screens/ChatScreen'
+import { SettingsScreen } from '../../screens/SettingsScreen'
+import { RMRScreen } from '../../screens/RMRScreen'
+import { SpottingScreen } from '../../screens/SpottingScreen'
+import { ChatScreen } from '../../screens/ChatScreen'
 
 const screens = {
   Home: HomeTabNavigatorScreen,

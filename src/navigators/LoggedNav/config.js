@@ -1,7 +1,7 @@
 import { createStackNavigator } from 'react-navigation'
 
-import { TabNavigatorScreen } from '../111-TabNavigator/TabNavigator'
-import { ModalNavigator } from '../112-ModalNavigator/ModalNavigator'
+import { TabNavigatorScreen } from '../TabNav/config'
+import { ModalNavigator } from '../ModalNav/config'
 
 export const LoggedNavigator = createStackNavigator(
   {
