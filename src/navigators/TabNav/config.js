@@ -1,17 +1,17 @@
 import { createBottomTabNavigator } from 'react-navigation'
 
 import { HomeTabNavigatorScreen } from '../HomeTabNav/config'
-import { SettingsScreen } from '../../screens/SettingsScreen'
-import { RMRScreen } from '../../screens/RMRScreen'
+import { SettingsTabNavigatorScreen } from '../SettingsTabNav/config'
+import { RMRTabNavigatorScreen } from '../RMRTabNav/config'
 import { SpottingTabNavigatorScreen } from '../SpottingTabNav/config'
-import { ChatScreen } from '../../screens/ChatScreen'
+import { ChatTabNavigatorScreen } from '../ChatTabNav/config'
 
 const screens = {
   Home: HomeTabNavigatorScreen,
-  Settings: SettingsScreen,
-  RMR: RMRScreen,
+  Settings: SettingsTabNavigatorScreen,
+  RMR: RMRTabNavigatorScreen,
   Spotting: SpottingTabNavigatorScreen,
-  Chat: ChatScreen,
+  Chat: ChatTabNavigatorScreen,
 }
 
 const options = {
