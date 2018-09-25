@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { createBottomTabNavigator } from 'react-navigation'
 
 import { HomeTabNavigatorScreen } from '../HomeTabNav/config'
@@ -38,3 +40,22 @@ const options = {
 }
 
 export const TabNavigator = createBottomTabNavigator(screens, options)
+
+const HOME_INDEX = 0
+
+export class TabNavigatorScreen extends React.Component {
+  static router = TabNavigator.router
+
+  static navigationOptions = ({ navigation }) => {
+    const isHomeTabFocused = navigation.state.index === HOME_INDEX
+    // const isMasterViewFocused = navigation.state.routes[HOME_INDEX].index === 0
+
+    return {
+      header: isHomeTabFocused ? undefined : null,
+    }
+  }
+
+  render() {
+    return <TabNavigator navigation={this.props.navigation} />
+  }
+}

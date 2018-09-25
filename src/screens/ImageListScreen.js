@@ -38,7 +38,11 @@ export class ImageListScreen extends React.Component {
           numOfColumns={1}
           images={this.state.items}
           imageSelected={image =>
-            this.props.navigation.navigate('imageDetails', { url: image.url })
+            this.props.navigation.navigate('imageDetails', {
+              url: image.url,
+              hideHeader: true,
+              hideTabBar: true,
+            })
           }
         />
       </View>

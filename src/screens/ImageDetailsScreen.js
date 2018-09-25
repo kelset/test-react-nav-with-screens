@@ -1,5 +1,13 @@
 import React from 'react'
-import { View, Text, Dimensions, Button, Image, StyleSheet } from 'react-native'
+import {
+  View,
+  Text,
+  Dimensions,
+  Button,
+  Image,
+  StyleSheet,
+  SafeAreaView,
+} from 'react-native'
 import { Transition } from 'react-navigation-fluid-transitions'
 
 export class ImageDetailsScreen extends React.Component {
@@ -7,7 +15,7 @@ export class ImageDetailsScreen extends React.Component {
     const { navigation } = this.props
     const uri = navigation.getParam('url', '')
     return (
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <View style={styles.imageContainer}>
           <Transition shared={uri}>
             <Image style={styles.detailsImage} source={{ uri }} />
@@ -21,7 +29,7 @@ export class ImageDetailsScreen extends React.Component {
             </View>
           </View>
         </Transition>
-      </View>
+      </SafeAreaView>
     )
   }
 }
