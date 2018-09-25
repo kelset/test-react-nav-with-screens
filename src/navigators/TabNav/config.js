@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from 'react-native'
 
 import { createBottomTabNavigator } from 'react-navigation'
 
@@ -7,6 +8,9 @@ import { SettingsTabNavigatorScreen } from '../SettingsTabNav/config'
 import { RMRTabNavigatorScreen } from '../RMRTabNav/config'
 import { SpottingTabNavigatorScreen } from '../SpottingTabNav/config'
 import { ChatTabNavigatorScreen } from '../ChatTabNav/config'
+
+import { LogoTitle } from '../../components/LogoTitle'
+import { PlusOneButton } from '../../components/PlusOneButton'
 
 const screens = {
   Home: HomeTabNavigatorScreen,
@@ -48,10 +52,15 @@ export class TabNavigatorScreen extends React.Component {
 
   static navigationOptions = ({ navigation }) => {
     const isHomeTabFocused = navigation.state.index === HOME_INDEX
-    // const isMasterViewFocused = navigation.state.routes[HOME_INDEX].index === 0
+    const isMasterViewFocused = navigation.state.routes[HOME_INDEX].index === 0
 
     return {
-      header: isHomeTabFocused ? undefined : null,
+      header: isHomeTabFocused && isMasterViewFocused ? undefined : null,
+      headerLeft: (
+        <Button onPress={() => navigation.navigate('MyModal')} title="Info" />
+      ),
+      headerTitle: <LogoTitle />,
+      headerRight: <PlusOneButton />,
     }
   }
 
