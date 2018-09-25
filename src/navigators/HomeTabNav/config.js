@@ -2,13 +2,13 @@ import React from 'react'
 import { Image } from 'react-native'
 import { createFluidNavigator } from 'react-navigation-fluid-transitions'
 
-import { Screen1, Screen2, Screen3 } from '../../screens/ModalScreen'
+import { ImageListScreen } from '../../screens/ImageListScreen'
+import { ImageDetailsScreen } from '../../screens/ImageDetailsScreen'
 
 export const HomeTabNavigator = createFluidNavigator(
   {
-    screen1: { screen: Screen1 },
-    screen2: { screen: Screen2 },
-    screen3: { screen: Screen3 },
+    imageList: { screen: ImageListScreen },
+    imageDetails: { screen: ImageDetailsScreen },
   },
   {
     navigationOptions: {
