@@ -1,16 +1,42 @@
-import { createFluidNavigator } from 'react-navigation-fluid-transitions'
+import { Easing, Animated } from 'react-native'
 
-import { Screen1, Screen2, Screen3 } from '../../screens/ModalScreen'
+import { createStackNavigator } from 'react-navigation'
 
-export const ModalNavigator = createFluidNavigator(
+import { HomeScreen } from '../../screens/HomeScreen'
+import { DetailsScreen } from '../../screens/DetailsScreen'
+
+export const ModalNavigator = createStackNavigator(
   {
-    screen1: { screen: Screen1 },
-    screen2: { screen: Screen2 },
-    screen3: { screen: Screen3 },
+    Home: HomeScreen,
+    Details: DetailsScreen,
   },
   {
-    navigationOptions: {
-      gesturesEnabled: true,
-    },
+    initialRouteName: 'Home',
+    mode: 'card',
+    headerMode: 'none',
+    transitionConfig: () => ({
+      transitionSpec: {
+        duration: 300,
+        easing: Easing.out(Easing.poly(4)),
+        timing: Animated.timing,
+      },
+      screenInterpolator: sceneProps => {
+        const { layout, position, scene } = sceneProps
+        const { index } = scene
+
+        const width = layout.initWidth
+        const translateX = position.interpolate({
+          inputRange: [index - 1, index, index + 1],
+          outputRange: [width, 0, 0],
+        })
+
+        const opacity = position.interpolate({
+          inputRange: [index - 1, index - 0.99, index],
+          outputRange: [0, 1, 1],
+        })
+
+        return { opacity, transform: [{ translateX }] }
+      },
+    }),
   },
 )

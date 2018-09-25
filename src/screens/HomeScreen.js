@@ -2,20 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { View, Text, Button, AsyncStorage } from 'react-native'
 
-import { LogoTitle } from '../components/LogoTitle'
-import { PlusOneButton } from '../components/PlusOneButton'
-
 class HomeScreenBase extends React.Component {
-  static navigationOptions = ({ navigation }) => {
-    return {
-      headerLeft: (
-        <Button onPress={() => navigation.navigate('MyModal')} title="Info" />
-      ),
-      headerTitle: <LogoTitle />,
-      headerRight: <PlusOneButton />,
-    }
-  }
-
   shouldComponentUpdate(nextProps) {
     if (this.props.value !== nextProps.value) {
       console.log('the value changed even if the screen is sleeping!')
