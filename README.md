@@ -3,6 +3,6 @@
 This is a simple project for me to test:
 
 - [React Native 0.57.x](https://github.com/facebook/react-native/tree/0.57-stable)
-- [React Navigation 2.x](https://github.com/react-navigation/react-navigation/tree/2.x)
+- [React Navigation 3.x](https://github.com/react-navigation/react-navigation)
 - [React Native Screens](https://github.com/kmagiera/react-native-screens)
-- [Fluid Transitions](https://github.com/fram-x/FluidTransitions)
+- [Fluid Transitions](https://github.com/fram-x/FluidTransitions), with a [patch-package](https://github.com/ds300/patch-package) script while waiting for [this to land & be released](https://github.com/fram-x/FluidTransitions/pull/128).
