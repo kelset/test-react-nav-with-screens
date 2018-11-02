@@ -3,12 +3,12 @@ import {
   View,
   Dimensions,
   TouchableOpacity,
-  FlatList,
   Image,
   StyleSheet,
 } from 'react-native'
 import chunk from 'lodash.chunk'
 import { Transition } from 'react-navigation-fluid-transitions'
+import { FlatList } from 'react-navigation'
 
 const MARGIN = 10
 
