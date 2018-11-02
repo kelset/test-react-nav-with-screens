@@ -22,7 +22,7 @@ export const LoggedNavigator = createStackNavigator(
   },
   {
     mode: 'modal',
-    navigationOptions: {
+    defaultNavigationOptions: {
       headerMode: 'screen',
       headerTitleStyle: {
         fontWeight: 'bold',

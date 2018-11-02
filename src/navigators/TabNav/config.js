@@ -30,7 +30,7 @@ const options = {
       backgroundColor: 'blue',
     },
   },
-  navigationOptions: ({ navigation }) => {
+  defaultNavigationOptions: ({ navigation }) => {
     const { routes } = navigation.state
     let params = routes && routes[1] && routes[1].params
 

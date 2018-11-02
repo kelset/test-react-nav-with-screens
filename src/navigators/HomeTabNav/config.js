@@ -11,7 +11,7 @@ export const HomeTabNavigator = createFluidNavigator(
     imageDetails: { screen: ImageDetailsScreen },
   },
   {
-    navigationOptions: {
+    defaultNavigationOptions: {
       gesturesEnabled: true,
     },
   },
