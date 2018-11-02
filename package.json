@@ -11,7 +11,7 @@
     "react": "16.6.0-alpha.8af6728",
     "react-native": "0.57.4",
     "react-native-gesture-handler": "^1.0.8",
-    "react-native-screens": "1.0.0-alpha.12",
+    "react-native-screens": "1.0.0-alpha.15",
     "react-navigation": "3.0.0-rc.0",
     "react-navigation-fluid-transitions": "0.2.72",
     "react-redux": "5.1.0",
