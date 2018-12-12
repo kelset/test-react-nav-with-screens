@@ -5,10 +5,11 @@ import {
   TouchableOpacity,
   Image,
   StyleSheet,
+  FlatList,
 } from 'react-native'
 import chunk from 'lodash.chunk'
 import { Transition } from 'react-navigation-fluid-transitions'
-import { FlatList } from 'react-navigation'
+// import { FlatList } from 'react-navigation'
 
 const MARGIN = 10
 
