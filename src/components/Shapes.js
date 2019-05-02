@@ -1,16 +1,17 @@
 import React from "react";
-import { View } from "react-native";
+import { View, StyleSheet } from "react-native";
 
 export const Circle = props => (
   <View
-    style={{
-      justifyContent: "center",
-      alignItems: "center",
-      backgroundColor: props.background,
-      width: props.size,
-      height: props.size,
-      borderRadius: props.size / 2,
-    }}
+    style={[
+      styles.circle,
+      {
+        backgroundColor: props.background,
+        width: props.size,
+        height: props.size,
+        borderRadius: props.size / 2,
+      },
+    ]}
   />
 );
 
@@ -24,3 +25,7 @@ export const Shape = props => (
     }}
   />
 );
+
+const styles = StyleSheet.create({
+  circle: { justifyContent: "center", alignItems: "center" },
+});

@@ -1,5 +1,5 @@
 import React from "react";
-import { Image } from "react-native";
+import { Image, StyleSheet } from "react-native";
 
 import { createStackNavigator } from "react-navigation";
 
@@ -24,7 +24,7 @@ export class ChatTabNavigatorScreen extends React.Component {
     tabBarIcon: ({ focused }) => (
       <Image
         source={require("../../assets/spiro.png")}
-        style={{ width: 15, height: 15, tintColor: focused ? "red" : "coral" }}
+        style={[styles.tabBarIcon, { tintColor: focused ? "red" : "coral" }]}
       />
     ),
   };
@@ -33,3 +33,7 @@ export class ChatTabNavigatorScreen extends React.Component {
     return <ChatTabNavigator navigation={this.props.navigation} />;
   }
 }
+
+const styles = StyleSheet.create({
+  tabBarIcon: { width: 15, height: 15 },
+});

@@ -15,6 +15,14 @@ export class ChatScreen extends React.Component {
     };
   };
 
+  _navigateToDetail = () => {
+    this.props.navigation.navigate("Details", {
+      itemId: 86,
+      otherParam: "Im getting there from Chat",
+      hideTabBar: true,
+    });
+  };
+
   render() {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
@@ -27,12 +35,4 @@ export class ChatScreen extends React.Component {
       </View>
     );
   }
-
-  _navigateToDetail = () => {
-    this.props.navigation.navigate("Details", {
-      itemId: 86,
-      otherParam: "Im getting there from Chat",
-      hideTabBar: true,
-    });
-  };
 }

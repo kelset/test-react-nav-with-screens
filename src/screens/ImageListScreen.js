@@ -4,14 +4,7 @@ import { View, Dimensions, StyleSheet } from "react-native";
 import { ImageGrid } from "../components/ImageGrid";
 
 export class ImageListScreen extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: [],
-    };
-  }
-
-  componentDidMount() {
+  static getDerivedStateFromProps() {
     const items = [];
     const size = Dimensions.get("window").width;
     const max = 24;
@@ -28,7 +21,7 @@ export class ImageListScreen extends React.Component {
         id: randomNumber,
       });
     }
-    this.setState({ ...this.state, items });
+    return { items };
   }
 
   render() {
