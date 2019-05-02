@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   View,
   Text,
@@ -7,13 +7,13 @@ import {
   Image,
   StyleSheet,
   SafeAreaView,
-} from 'react-native'
-import { Transition } from 'react-navigation-fluid-transitions'
+} from "react-native";
+import { Transition } from "react-navigation-fluid-transitions";
 
 export class ImageDetailsScreen extends React.Component {
   render() {
-    const { navigation } = this.props
-    const uri = navigation.getParam('url', '')
+    const { navigation } = this.props;
+    const uri = navigation.getParam("url", "");
     return (
       <SafeAreaView style={styles.container}>
         <View style={styles.imageContainer}>
@@ -30,7 +30,7 @@ export class ImageDetailsScreen extends React.Component {
           </View>
         </Transition>
       </SafeAreaView>
-    )
+    );
   }
 }
 
@@ -39,22 +39,22 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   detailsImage: {
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').width * 0.5,
+    width: Dimensions.get("window").width,
+    height: Dimensions.get("window").width * 0.5,
   },
   detailsView: {
     padding: 10,
-    backgroundColor: '#ECECEC',
+    backgroundColor: "#ECECEC",
     flex: 1,
   },
   buttonContainer: {
     flex: 1,
-    justifyContent: 'flex-end',
+    justifyContent: "flex-end",
   },
   text: {
     paddingBottom: 40,
   },
   imageContainer: {
-    flexDirection: 'row',
+    flexDirection: "row",
   },
-})
+});

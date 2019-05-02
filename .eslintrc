@@ -3,7 +3,6 @@
   "extends": [
     "standard",
     "@react-native-community",
-    "plugin:react/recommended",
     "prettier",
     "prettier/react",
     "prettier/standard"
@@ -21,46 +20,13 @@
     "jest": true
   },
 
-  // Map from global var to bool specifying if it can be redefined
-  "globals": {
-    "__DEV__": true,
-    "__dirname": false,
-    "__fbBatchedBridgeConfig": false,
-    "alert": false,
-    "cancelAnimationFrame": false,
-    "cancelIdleCallback": false,
-    "clearImmediate": true,
-    "clearInterval": false,
-    "clearTimeout": false,
-    "console": false,
-    "document": false,
-    "escape": false,
-    "Event": false,
-    "EventTarget": false,
-    "exports": false,
-    "fetch": false,
-    "FormData": false,
-    "global": false,
-    "jest": false,
-    "Map": true,
-    "module": false,
-    "navigator": false,
-    "process": false,
-    "Promise": true,
-    "requestAnimationFrame": true,
-    "requestIdleCallback": true,
-    "require": false,
-    "Set": true,
-    "setImmediate": true,
-    "setInterval": false,
-    "setTimeout": false,
-    "window": false,
-    "XMLHttpRequest": false,
-    "pit": false
-  },
-
   "rules": {
-    "prettier/prettier": ["error"],
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "all"
+      }
+    ],
 
     // Standard
     "arrow-body-style": 0, // Require braces in arrow function body
