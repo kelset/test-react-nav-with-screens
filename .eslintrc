@@ -2,12 +2,13 @@
   "parser": "babel-eslint",
   "extends": [
     "standard",
+    "@react-native-community",
     "plugin:react/recommended",
     "prettier",
     "prettier/react",
     "prettier/standard"
   ],
-  "plugins": ["prettier", "react", "standard", "react-native"],
+  "plugins": ["prettier", "react", "standard"],
   "parserOptions": {
     "sourceType": "module",
     "ecmaFeatures": {
@@ -17,8 +18,7 @@
   "env": {
     "es6": true,
     "node": true,
-    "jest": true,
-    "react-native/react-native": true
+    "jest": true
   },
 
   // Map from global var to bool specifying if it can be redefined
@@ -60,14 +60,7 @@
   },
 
   "rules": {
-    "prettier/prettier": [
-      "error",
-      {
-        "singleQuote": true,
-        "trailingComma": "all",
-        "semi": false
-      }
-    ],
+    "prettier/prettier": ["error"],
 
     // Standard
     "arrow-body-style": 0, // Require braces in arrow function body
@@ -92,19 +85,13 @@
     // React
     "react/display-name": 0,
     "react/prop-types": 0, // Prevent missing props validation in a React component definition - Using flow proptypes instead
-    "react/sort-comp": 0, // Enforce component methods order
-    "react/jsx-filename-extension": [2, { "extensions": [".js"] }], // not supported on react native https://github.com/facebook/react-native/pull/5233
-
-    // React Native
-    "react-native/no-unused-styles": 2,
-    "react-native/split-platform-components": 0,
-    "react-native/no-inline-styles": 0,
-    "react-native/no-color-literals": 0
+    "react/sort-comp": 1, // Enforce component methods order
+    "react/jsx-filename-extension": [2, { "extensions": [".js"] }] // not supported on react native https://github.com/facebook/react-native/pull/5233
   },
 
   "settings": {
     "react": {
-      "version": "16.3"
+      "version": "16.8"
     }
   }
 }
