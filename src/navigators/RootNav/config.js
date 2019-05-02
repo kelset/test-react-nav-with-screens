@@ -2,12 +2,12 @@ import {
   createSwitchNavigator,
   createStackNavigator,
   createAppContainer,
-} from 'react-navigation'
-import { LoggedNavigator } from '../LoggedNav/config'
-import { SignInScreen } from '../../screens/SignInScreen'
-import { LoadingScreen } from '../../screens/LoadingScreen'
+} from "react-navigation";
+import { LoggedNavigator } from "../LoggedNav/config";
+import { SignInScreen } from "../../screens/SignInScreen";
+import { LoadingScreen } from "../../screens/LoadingScreen";
 
-const AuthStack = createStackNavigator({ SignIn: SignInScreen })
+const AuthStack = createStackNavigator({ SignIn: SignInScreen });
 
 const SwitchNavigator = createSwitchNavigator(
   {
@@ -16,8 +16,8 @@ const SwitchNavigator = createSwitchNavigator(
     Auth: AuthStack,
   },
   {
-    initialRouteName: 'Loading',
+    initialRouteName: "Loading",
   },
-)
+);
 
-export const RootNavigator = createAppContainer(SwitchNavigator)
+export const RootNavigator = createAppContainer(SwitchNavigator);

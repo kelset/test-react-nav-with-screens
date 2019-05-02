@@ -1,12 +1,12 @@
 export const increment = () => ({
-  type: "INCREMENT"
+  type: "INCREMENT",
 });
 
 export const decrement = () => ({
-  type: "DECREMENT"
+  type: "DECREMENT",
 });
 
 export const changeTitle = (title: string) => ({
   type: "CHANGE_TITLE",
-  title
+  title,
 });

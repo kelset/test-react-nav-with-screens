@@ -1,19 +1,19 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { View, Text, Button, AsyncStorage } from 'react-native'
+import React from "react";
+import { connect } from "react-redux";
+import { View, Text, Button, AsyncStorage } from "react-native";
 
 class HomeScreenBase extends React.Component {
   shouldComponentUpdate(nextProps) {
     if (this.props.value !== nextProps.value) {
-      console.log('the value changed even if the screen is sleeping!')
-      return true
+      console.log("the value changed even if the screen is sleeping!");
+      return true;
     }
-    return false
+    return false;
   }
 
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
         <Text>Home Screen</Text>
         <Text>{`Counter=${this.props.value}`}</Text>
 
@@ -21,25 +21,25 @@ class HomeScreenBase extends React.Component {
 
         <Button title="Actually, sign me out :)" onPress={this._signOutAsync} />
       </View>
-    )
+    );
   }
 
   _navigateToDetail = () => {
-    this.props.navigation.navigate('Details', {
+    this.props.navigation.navigate("Details", {
       itemId: 86,
-      otherParam: 'anything you want here',
+      otherParam: "anything you want here",
       hideTabBar: true,
-    })
-  }
+    });
+  };
 
   _signOutAsync = async () => {
-    await AsyncStorage.clear()
-    this.props.navigation.navigate('Auth')
-  }
+    await AsyncStorage.clear();
+    this.props.navigation.navigate("Auth");
+  };
 }
 
 const mapStateToProps = state => ({
   value: state.basicReducer.value,
-})
+});
 
-export const HomeScreen = connect(mapStateToProps)(HomeScreenBase)
+export const HomeScreen = connect(mapStateToProps)(HomeScreenBase);

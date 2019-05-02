@@ -5,7 +5,7 @@ import {
   TouchableOpacity,
   Image,
   StyleSheet,
-  FlatList
+  FlatList,
 } from "react-native";
 import chunk from "lodash.chunk";
 import { Transition } from "react-navigation-fluid-transitions";
@@ -25,7 +25,7 @@ export class ImageGrid extends React.Component {
   static getDerivedStateFromProps(nextProps, prevState) {
     return {
       ...prevState,
-      chunkedImages: chunk(nextProps.images, prevState.colCount)
+      chunkedImages: chunk(nextProps.images, prevState.colCount),
     };
   }
 
@@ -77,9 +77,9 @@ export class ImageGrid extends React.Component {
 
 const styles = StyleSheet.create({
   row: {
-    flexDirection: "row"
+    flexDirection: "row",
   },
   cell: {
-    margin: MARGIN
-  }
+    margin: MARGIN,
+  },
 });

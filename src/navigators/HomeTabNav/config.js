@@ -1,9 +1,9 @@
-import React from 'react'
-import { Image } from 'react-native'
-import { createFluidNavigator } from 'react-navigation-fluid-transitions'
+import React from "react";
+import { Image } from "react-native";
+import { createFluidNavigator } from "react-navigation-fluid-transitions";
 
-import { ImageListScreen } from '../../screens/ImageListScreen'
-import { ImageDetailsScreen } from '../../screens/ImageDetailsScreen'
+import { ImageListScreen } from "../../screens/ImageListScreen";
+import { ImageDetailsScreen } from "../../screens/ImageDetailsScreen";
 
 export const HomeTabNavigator = createFluidNavigator(
   {
@@ -15,21 +15,21 @@ export const HomeTabNavigator = createFluidNavigator(
       gesturesEnabled: true,
     },
   },
-)
+);
 
 export class HomeTabNavigatorScreen extends React.Component {
-  static router = HomeTabNavigator.router
+  static router = HomeTabNavigator.router;
 
   static navigationOptions = {
     tabBarIcon: ({ focused }) => (
       <Image
-        source={require('../../assets/spiro.png')}
-        style={{ width: 15, height: 15, tintColor: focused ? 'red' : 'coral' }}
+        source={require("../../assets/spiro.png")}
+        style={{ width: 15, height: 15, tintColor: focused ? "red" : "coral" }}
       />
     ),
-  }
+  };
 
   render() {
-    return <HomeTabNavigator navigation={this.props.navigation} />
+    return <HomeTabNavigator navigation={this.props.navigation} />;
   }
 }

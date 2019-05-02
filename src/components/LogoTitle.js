@@ -21,7 +21,7 @@ export class LogoTitleBase extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  title: state.basicReducer.title
+  title: state.basicReducer.title,
 });
 
 const styles = StyleSheet.create({
@@ -30,13 +30,13 @@ const styles = StyleSheet.create({
     width: SIZE,
     height: SIZE,
     tintColor: "red",
-    marginRight: 5
+    marginRight: 5,
   },
   imageNoTitle: {
     width: SIZE,
     height: SIZE,
-    tintColor: "red"
-  }
+    tintColor: "red",
+  },
 });
 
 export const LogoTitle = connect(mapStateToProps)(LogoTitleBase);

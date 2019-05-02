@@ -1,34 +1,34 @@
-import React from 'react'
-import { View, Dimensions, StyleSheet } from 'react-native'
+import React from "react";
+import { View, Dimensions, StyleSheet } from "react-native";
 
-import { ImageGrid } from '../components/ImageGrid'
+import { ImageGrid } from "../components/ImageGrid";
 
 export class ImageListScreen extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       items: [],
-    }
+    };
   }
 
   componentDidMount() {
-    const items = []
-    const size = Dimensions.get('window').width
-    const max = 24
-    const randMax = 100
+    const items = [];
+    const size = Dimensions.get("window").width;
+    const max = 24;
+    const randMax = 100;
     for (let i = 0; i < max; i++) {
-      let randomNumber = Math.floor(Math.random() * randMax + 1)
-      const idExists = e => e.id === randomNumber
+      let randomNumber = Math.floor(Math.random() * randMax + 1);
+      const idExists = e => e.id === randomNumber;
       while (items.findIndex(idExists) > -1) {
-        randomNumber = Math.floor(Math.random() * randMax + 1)
+        randomNumber = Math.floor(Math.random() * randMax + 1);
       }
 
       items.push({
         url: `https://picsum.photos/${size}/${size}?image=${randomNumber}`,
         id: randomNumber,
-      })
+      });
     }
-    this.setState({ ...this.state, items })
+    this.setState({ ...this.state, items });
   }
 
   render() {
@@ -38,7 +38,7 @@ export class ImageListScreen extends React.Component {
           numOfColumns={1}
           images={this.state.items}
           imageSelected={image =>
-            this.props.navigation.navigate('imageDetails', {
+            this.props.navigation.navigate("imageDetails", {
               url: image.url,
               hideHeader: true,
               hideTabBar: true,
@@ -46,7 +46,7 @@ export class ImageListScreen extends React.Component {
           }
         />
       </View>
-    )
+    );
   }
 }
 
@@ -54,4 +54,4 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-})
+});

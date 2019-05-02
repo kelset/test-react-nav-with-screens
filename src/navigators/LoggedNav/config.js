@@ -1,10 +1,10 @@
-import React from 'react'
-import { Button } from 'react-native'
+import React from "react";
+import { Button } from "react-native";
 
-import { createStackNavigator } from 'react-navigation'
+import { createStackNavigator } from "react-navigation";
 
-import { TabNavigatorScreen } from '../TabNav/config'
-import { ModalNavigator } from '../ModalNav/config'
+import { TabNavigatorScreen } from "../TabNav/config";
+import { ModalNavigator } from "../ModalNav/config";
 
 export const LoggedNavigator = createStackNavigator(
   {
@@ -21,13 +21,13 @@ export const LoggedNavigator = createStackNavigator(
     },
   },
   {
-    mode: 'modal',
+    mode: "modal",
     defaultNavigationOptions: {
-      headerMode: 'screen',
+      headerMode: "screen",
       headerTitleStyle: {
-        fontWeight: 'bold',
+        fontWeight: "bold",
       },
       gesturesEnabled: false,
     },
   },
-)
+);

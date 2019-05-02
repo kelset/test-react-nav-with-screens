@@ -1,10 +1,10 @@
-import React from 'react'
-import { Image } from 'react-native'
+import React from "react";
+import { Image } from "react-native";
 
-import { createStackNavigator } from 'react-navigation'
+import { createStackNavigator } from "react-navigation";
 
-import { SettingsScreen } from '../../screens/SettingsScreen'
-import { DetailsScreen } from '../../screens/DetailsScreen'
+import { SettingsScreen } from "../../screens/SettingsScreen";
+import { DetailsScreen } from "../../screens/DetailsScreen";
 
 export const SettingsTabNavigator = createStackNavigator(
   {
@@ -12,24 +12,24 @@ export const SettingsTabNavigator = createStackNavigator(
     Details: DetailsScreen,
   },
   {
-    initialRouteName: 'Settings',
-    mode: 'card',
+    initialRouteName: "Settings",
+    mode: "card",
   },
-)
+);
 
 export class SettingsTabNavigatorScreen extends React.Component {
-  static router = SettingsTabNavigator.router
+  static router = SettingsTabNavigator.router;
 
   static navigationOptions = {
     tabBarIcon: ({ focused }) => (
       <Image
-        source={require('../../assets/spiro.png')}
-        style={{ width: 15, height: 15, tintColor: focused ? 'red' : 'coral' }}
+        source={require("../../assets/spiro.png")}
+        style={{ width: 15, height: 15, tintColor: focused ? "red" : "coral" }}
       />
     ),
-  }
+  };
 
   render() {
-    return <SettingsTabNavigator navigation={this.props.navigation} />
+    return <SettingsTabNavigator navigation={this.props.navigation} />;
   }
 }
