@@ -4,6 +4,10 @@ import { View, Dimensions, StyleSheet } from "react-native";
 import { ImageGrid } from "../components/ImageGrid";
 
 export class ImageListScreen extends React.Component {
+  state = {
+    items: [],
+  };
+
   static getDerivedStateFromProps() {
     const items = [];
     const size = Dimensions.get("window").width;
